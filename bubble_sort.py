@@ -13,5 +13,9 @@ def bubble_sort(elements):
 
 if __name__ == '__main__':
 	elements = [3,8,1,0,81,6,87,9,29,76]
+	test = [[1,9,7,2,5],[1,9,7,2,4],[1,9,7,2,3]]
 	bubble_sort(elements)
 	print(elements)
+	for i in test:
+		bubble_sort(test)
+	print(test)
