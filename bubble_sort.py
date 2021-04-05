@@ -1,18 +1,17 @@
-def bubble(my_list):
-	size = len(my_list)
-	print(f"size of list is {size}")
-	for j in range(size-1):
-		Swapped = False
-		for i in range(size-1):
-			if my_list[i]>my_list[i+1] :
-				temp = my_list[i]
-				my_list[i] = my_list[i+1]
-				my_list[i+1] = temp
-				Swapped = True
-		if Swapped == False:
+def bubble_sort(elements):
+	size = len(elements)
+	for i in range (size-1):
+		swapped = False
+		for j in range (size-1-i):
+			if elements[j] > elements[j+1]:
+				temp = elements[j]
+				elements[j] = elements[j+1]
+				elements[j+1] = temp
+				swapped = True
+		if not swapped:
 			break
-	print(my_list)
-			
+
 if __name__ == '__main__':
-	my_list = [1,2,3,4,5,6,9,1]
-	bubble(my_list)
+	elements = [3,8,1,0,81,6,87,9,29,76]
+	bubble_sort(elements)
+	print(elements)
